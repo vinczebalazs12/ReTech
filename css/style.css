@@ -74,8 +74,134 @@ footer{
     #navbarNav .nav-link{
         font-size: .9375rem;
     }
+
+    .hero-lead{
+        font-size: 1rem;
+    }
 }
 
+/* ---------- Banner ---------- */
 
-/* ---- Banner ----*/
+.hero{
+    background-color: #fff;
+    border-block-end: 1px solid rgba(15, 28, 34, .08);
+    color: #0f1c22;
+}
 
+.hero-kicker{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: .9rem;
+    font-family: var(--rt-font);
+    font-weight: 500;
+    letter-spacing: .14em;
+    color: #7a8b91;
+}
+
+.hero-kicker::before{
+    content: "";
+    width: 22px;
+    height: 2px;
+    background-color: var(--rt-accent);
+}
+
+.hero-title{
+    margin-bottom: 1rem;
+    font-family: var(--rt-font);
+    font-size: clamp(2rem, 1.3rem + 2.8vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.06;
+    letter-spacing: -.025em;
+}
+
+.hero-mark{
+    color: #10707c;
+}
+
+.hero-lead{
+    max-width: 44ch;
+    margin-bottom: 1.75rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: #4a5c63;
+}
+
+.hero-actions{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.hero-btn{
+    display: inline-flex;
+    align-items: center;
+    padding: .8125rem 1.375rem;
+    border-radius: 3px;
+    background-color: #0f1c22;
+    color: #fff;
+    font-family: var(--rt-font);
+    font-size: .9375rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color .16s ease;
+}
+
+.hero-btn:hover{
+    background-color: #1d3b45;
+    color: #fff;
+}
+
+.hero-btn:focus-visible{
+    outline: 3px solid rgba(16, 112, 124, .35);
+    outline-offset: 3px;
+}
+
+.hero-link{
+    font-family: var(--rt-font);
+    font-size: .9375rem;
+    font-weight: 500;
+    color: #0f1c22;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(15, 28, 34, .3);
+}
+
+.hero-link:hover{
+    color: #0f1c22;
+    text-decoration-color: #10707c;
+}
+
+.hero-meta{
+    margin: 0;
+    font-family: var(--rt-font);
+    font-size: .8125rem;
+    letter-spacing: .02em;
+    color: #6b8189;
+}
+
+.hero-figure{
+    margin: 0;
+}
+
+.hero-photo{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid rgba(15, 28, 34, .1);
+    border-radius: 3px;
+    background-color: #eef1f2;
+}
+
+.hero-caption{
+    margin-top: .75rem;
+    font-family: var(--rt-font);
+    font-size: .75rem;
+    letter-spacing: .02em;
+    color: #7a8b91;
+}
