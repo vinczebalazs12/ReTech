@@ -1,6 +1,9 @@
-# ReTech - Project
+# ReTech Project - 12.C
+
+
+#### Project manager: Vincze Balázs
+
 #### Team members: Kalla Dzsínó Alex és Vincze Balázs
-#### Groupname: ???
 
 ---
 ### Programming languages:
@@ -20,7 +23,14 @@
 
 ---
 ### Links
- - Figma: https://www.figma.com/design/94IbTGTONmhn009blkskaO/ReTech---Projekt?node-id=0-1&t=bpBNnLljdvwxiABJ-1
- - Trello: https://trello.com/invite/b/6b0682ce1344910c265980fe/ATTI4ca23dc8693b11172fd5bb73cfcd3b33C68A5F13/webaruhaz
+ - [Figma (UI / UX design)](https://www.figma.com/design/94IbTGTONmhn009blkskaO/ReTech---Projekt?node-id=0-1&t=bpBNnLljdvwxiABJ-1)
+ - [Trello](https://trello.com/invite/b/6b0682ce1344910c265980fe/ATTI4ca23dc8693b11172fd5bb73cfcd3b33C68A5F13/webaruhaz)
+ - Gemini (texts, images)
+ - Visual Studio Code 
 
-##### &copy; 2026 - ReTech
+---
+### Presentation
+- [PowerPoint](coming soon.....)
+
+---
+##### &copy; 2026 ReTech - All rights reserved!
