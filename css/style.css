@@ -1,11 +1,11 @@
-body{
-    background-color: black;
-    font-family: 'Inter Mono One';
+:root {
+    --rt-font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --rt-accent: #1fa7b5;
 }
 
-.navbar{
-    background: #fffefe;
-    padding: 15px;
+body{
+    background-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 footer{
@@ -17,24 +17,65 @@ footer{
     text-align: center;
 }
 
-.nav-link{
-    color: black;
-}
-
-.nav-link:active{
-    color: gray;
-}
-
 .carousel{
     padding: 30px;
-}
-
-.logo{
-    width: 20%;
-    padding-top: 15px;
 }
 
 .new1{
     border-top: 1px solid rgba(5, 5, 5, 0.288);
     border-radius: 150px;
 }
+
+/* ---------- Navbar ---------- */
+
+.navbar{
+    font-family: var(--rt-font);
+}
+
+.nav-logo{
+    display: block;
+    height: 36px;
+    width: auto;
+    padding-left: 15px;
+}
+
+.navbar .navbar-nav .nav-link{
+    font-size: .8125rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link[aria-current="page"]{
+    border-block-end-color: var(--rt-accent);
+}
+
+@media (min-width: 768px) {
+    .navbar-toggler{
+        display: none;
+    }
+
+    #navbarNav .navbar-nav{
+        flex-direction: row;
+        align-items: center;
+        margin-inline-start: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .nav-logo{
+        height: 36px;
+    }
+
+    #navbarNav .drawer-body{
+        padding: 1.25rem 1.5rem;
+    }
+
+    #navbarNav .nav-link{
+        font-size: .9375rem;
+    }
+}
+
+
+/* ---- Banner ----*/
+
