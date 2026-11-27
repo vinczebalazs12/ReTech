@@ -232,8 +232,11 @@ const server = http.createServer((request, response) => {
     const staticFiles = {
         "/style.css": { file: "css/style.css", contentType: "text/css; charset=utf-8" },
         "/script.js": { file: "js/script.js", contentType: "text/javascript; charset=utf-8" },
+        "/js/script.js": { file: "js/script.js", contentType: "text/javascript; charset=utf-8" },
         "/assets/img/logo_withoutbg_blacktext.png": { file: "assets/img/logo_withoutbg_blacktext.png", contentType: "image/png" },
         "/assets/img/hero-desk.jpg": { file: "/assets/img/hero-desk.jpg", contentType: "image/png" },
+        "/assets/img/product1.png": { file: "assets/img/product1.png", contentType: "image/png" },
+        "/assets/img/product2.png": { file: "assets/img/product2.png", contentType: "image/png" },
         "/assets/img/logo_withoutbg.png": { file: "/assets/img/logo_withoutbg.png", contentType: "image/png" },
         "/assets/img/contact_bg.jpg": { file: "/assets/img/contact_bg.jpg", contentType: "image/png" },
     };
