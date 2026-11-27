@@ -235,6 +235,9 @@ const server = http.createServer((request, response) => {
         "/assets/img/logo_withoutbg_blacktext.png": { file: "assets/img/logo_withoutbg_blacktext.png", contentType: "image/png" },
         "/assets/img/hero-desk.jpg": { file: "/assets/img/hero-desk.jpg", contentType: "image/png" },
         "/assets/img/logo_withoutbg.png": { file: "/assets/img/logo_withoutbg.png", contentType: "image/png" },
+        "/assets/img/geo-alt-fill.svg": { file: "/assets/img/geo-alt-fill.svg", contentType: "image/svg" },
+        "/assets/img/telephone-fill.svg": { file: "/assets/img/telephone-fill.svg", contentType: "image/svg" },
+        "/assets/img/info-circle-fill.svg": { file: "/assets/img/info-circle-fill.svg", contentType: "image/svg" },
     };
 
 

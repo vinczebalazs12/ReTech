@@ -9,51 +9,159 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="/style.css">
-    <title>ReTech - Trade in</title>
+    <title>ReTech - Main page</title>
 </head>
 
 <body>
-<nav class="navbar d-flex align-items-center gap-3 bg-white border-bottom sticky-top px-3 py-2" data-bs-theme="light" aria-label="Fő navigáció">
-    <a class="navbar-brand p-0 m-0" href="/index.html">
-        <img class="nav-logo" src="/assets/img/logo_withoutbg_blacktext.png" alt="ReTech – felújított gépek és PC technológia">
-    </a>
+    <nav class="navbar d-flex align-items-center gap-3 bg-white border-bottom sticky-top px-3 py-2"
+        data-bs-theme="light" aria-label="Fő navigáció">
+        <a class="navbar-brand p-0 m-0" href="/index.html">
+            <img class="nav-logo" src="/assets/img/logo_withoutbg_blacktext.png"
+                alt="ReTech – felújított gépek és PC technológia">
+        </a>
 
-    <dialog class="md:drawer drawer-end ms-auto" id="navbarNav" aria-labelledby="navbarNavLabel">
-        <div class="drawer-header">
-            <h5 class="drawer-title fs-sm text-uppercase fw-semibold" id="navbarNavLabel">Menü</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Bezárás"></button>
+        <dialog class="md:drawer drawer-end ms-auto" id="navbarNav" aria-labelledby="navbarNavLabel">
+            <div class="drawer-header">
+                <h5 class="drawer-title fs-sm text-uppercase fw-semibold" id="navbarNavLabel">Menü</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Bezárás"></button>
+            </div>
+            <div class="drawer-body p-4">
+                <ul class="navbar-nav nav-underline gap-4 fs-xs fw-semibold text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/trade-in.html">Trade in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </dialog>
+
+        <button class="btn btn-icon ms-2" type="button" aria-label="Kosár">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2.75 3.75h2.1l2.2 10.9a1.7 1.7 0 0 0 1.66 1.35h8.2a1.7 1.7 0 0 0 1.66-1.32l1.4-6.08H5.6" />
+                <circle cx="9.6" cy="19.6" r="1.15" />
+                <circle cx="17.4" cy="19.6" r="1.15" />
+            </svg>
+        </button>
+
+        <button class="btn btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-label="Menü megnyitása">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+    </nav>
+
+    <section class="hero" lang="en" aria-labelledby="hero-title">
+        <div class="container">
+            <div class="row align-items-center bannersection">
+
+                <div class="col-12 lg:col-6">
+
+
+                    <h1 class="hero-title" id="hero-title">
+                        Trade<br>
+                        <span class="hero-mark">In</span>.
+                    </h1>
+
+                    <p class="hero-lead">
+                        
+                    </p>
+
+                </div>
+            </div>
         </div>
-        <div class="drawer-body p-4">
-            <ul class="navbar-nav nav-underline gap-4 fs-xs fw-semibold text-uppercase">
-                <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/products.html">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/trade-in.html">Trade in</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact.html">Contact</a>
-                </li>
-            </ul>
+        
+
+       
+
+
+
+    </section>
+
+
+
+    <footer class="bg-black fg-white pt-10 pb-8">
+        <div class="container">
+
+            <div class="row gy-6 pb-8">
+
+                <!-- Logo -->
+                <div class="col-12 lg:col-4">
+                    <img src="/assets/img/logo_withoutbg.png" class="w-10" alt="logo">
+                </div>
+
+                <!-- Column 2: Navigation Links 1 -->
+                <div class="col-12 lg:col-4">
+                    <ul class="list-unstyled text-uppercase fs-xs fw-semibold d-flex flex-column gap-2 mb-0">
+                        <li><a href="products.html" class="fg-white text-decoration-none">Products</a></li>
+                        <li><a href="trade-in.html" class="fg-white text-decoration-none">Trade in</a></li>
+                        <li><a href="contact.html" class="fg-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Navigation Links 2 -->
+                <div class="col-12 lg:col-4">
+
+                    <ul class="list-unstyled text-uppercase fs-xs fw-semibold d-flex flex-column gap-2 mb-0">
+                        <li class="d-flex align-items-center gap-2">
+                            <svg xmlns="http://w3.org" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                            </svg>
+                            <span>1117 Budapest, Infopark sétány 1.</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <svg xmlns="http://w3.org" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                            <span>+36 70 454 6967</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <svg xmlns="http://w3.org" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                            </svg>
+                            <span>info@retech.hu</span>
+                        </li>
+                    </ul>
+
+
+
+                    <!-- <ul class="list-unstyled text-uppercase fs-xs fw-semibold d-flex flex-column gap-2 mb-0">
+                        <li><i class="bi bi-geo-alt-fill"></i> 1117 Budapest, Infopark sétány 1.</li>
+                        <li><i class="bi bi-telephone-fill"></i> +36 70 454 6967</li>
+                        <li><i class="bi bi-info-circle-fill"></i> info@retech.hu</li>
+                    </ul> -->
+
+                </div>
+
+
+            </div>
+
+            <hr class="border-secondary opacity-50 my-6">
+
+            <div class="text-center pt-2">
+                <div class="d-flex justify-content-center gap-3 mb-4">
+                    <a href="https://www.facebook.com/RETech/?locale=hu_HU"
+                        class="btn btn-outline rounded-circle fg-white border-secondary" aria-label="Facebook">f</a>
+                    <a href="https://x.com/retech" class="btn btn-outline rounded-circle fg-white border-secondary"
+                        aria-label="Twitter">t</a>
+                    <a href="https://www.instagram.com/retech_org/"
+                        class="btn btn-outline rounded-circle fg-white border-secondary" aria-label="Instagram">in</a>
+                </div>
+                <p class="fs-xs fg-3 mb-0">&copy; 2026 ReTech - All rights reserved.</p>
+            </div>
+
         </div>
-    </dialog>
-
-    <button class="btn btn-icon ms-2" type="button" aria-label="Kosár">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M2.75 3.75h2.1l2.2 10.9a1.7 1.7 0 0 0 1.66 1.35h8.2a1.7 1.7 0 0 0 1.66-1.32l1.4-6.08H5.6"/>
-            <circle cx="9.6" cy="19.6" r="1.15"/>
-            <circle cx="17.4" cy="19.6" r="1.15"/>
-        </svg>
-    </button>
-
-    <button class="btn btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Menü megnyitása">
-        <span class="navbar-toggler-icon" aria-hidden="true"></span>
-    </button>
-</nav>
-
+    </footer>
 
 
     <script src="js/script.js"></script>
