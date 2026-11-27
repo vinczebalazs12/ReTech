@@ -58,26 +58,95 @@
         </button>
     </nav>
 
-    <section class="hero" lang="en" aria-labelledby="hero-title">
+    <section class="catalog" data-product-grid aria-labelledby="products-title">
         <div class="container">
-            <div class="row align-items-center bannersection">
-
-                <div class="col-12 lg:col-6">
-
-
-                    <h1 class="hero-title" id="hero-title">
+            <header class="catalog__head">
+                <h1 class="hero-title" id="hero-title">
                         Our<br>
                         <span class="hero-mark">Products</span>.
                     </h1>
+                <p class="catalog__lead">
+                    Business-grade laptops and desktops, cleaned, upgraded and covered by a 12-month warranty.
+                </p>
+            </header>
 
-                    <p class="hero-lead">
-                        
-                    </p>
+            <div class="catalog__bar">
+                <label class="catalog__field">
+                    <span class="catalog__label">Search</span>
+                    <span class="catalog__control">
+                        <svg class="catalog__icon" viewBox="0 0 24 24" width="16" height="16" fill="none"
+                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <circle cx="11" cy="11" r="6.5" />
+                            <path d="M16.2 16.2 20.5 20.5" />
+                        </svg>
+                        <input class="catalog__input" type="search" placeholder="Product name…" data-filter-q
+                            autocomplete="off">
+                    </span>
+                </label>
 
-                </div>
+                <label class="catalog__field">
+                    <span class="catalog__label">Category</span>
+                    <span class="catalog__control">
+                        <svg class="catalog__icon" viewBox="0 0 24 24" width="16" height="16" fill="none"
+                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path
+                                d="M4 11.2V5.8A1.8 1.8 0 0 1 5.8 4h5.4c.5 0 .9.2 1.3.5l7.2 7.2a1.8 1.8 0 0 1 0 2.5l-5.3 5.3a1.8 1.8 0 0 1-2.5 0L4.6 12.5a1.8 1.8 0 0 1-.6-1.3Z" />
+                            <circle cx="8.4" cy="8.4" r="1.1" />
+                        </svg>
+                        <select class="catalog__input catalog__select" data-filter-type>
+                            <option value="all">All</option>
+                            <option value="Laptop">Laptops</option>
+                            <option value="PC">PCs</option>
+                        </select>
+                        <svg class="catalog__chevron" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="m6 9.5 6 6 6-6" />
+                        </svg>
+                    </span>
+                </label>
+
+                <label class="catalog__field">
+                    <span class="catalog__label">Sort</span>
+                    <span class="catalog__control">
+                        <svg class="catalog__icon" viewBox="0 0 24 24" width="16" height="16" fill="none"
+                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+                            <path d="M4 7h12M4 12h9M4 17h6" />
+                        </svg>
+                        <select class="catalog__input catalog__select" data-sort>
+                            <option value="name">Name (A–Z)</option>
+                            <option value="price-asc">Price: low to high</option>
+                            <option value="price-desc">Price: high to low</option>
+                        </select>
+                        <svg class="catalog__chevron" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                            stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="m6 9.5 6 6 6-6" />
+                        </svg>
+                    </span>
+                </label>
+
+                <label class="catalog__field">
+                    <span class="catalog__label">Max price</span>
+                    <span class="catalog__control">
+                        <span class="catalog__prefix" aria-hidden="true">€</span>
+                        <input class="catalog__input" type="number" min="0" step="10" placeholder="e.g. 400"
+                            data-filter-max>
+                    </span>
+                </label>
             </div>
-        </div>
 
+            <div class="catalog__meta">
+                <p class="catalog__count" data-count aria-live="polite">Loading products…</p>
+                <a class="product-card__link" href="/contact.html">Need help choosing? <span aria-hidden="true">→</span></a>
+            </div>
+
+            <div class="catalog__grid" data-grid></div>
+
+            <p class="catalog__empty" data-empty hidden>No products match these filters.</p>
+        </div>
     </section>
 
 
