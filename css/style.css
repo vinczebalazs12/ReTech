@@ -213,7 +213,7 @@ footer{
 
 .aura {
 	font-family: Arial;
-	background-image: url('/assets/img/contact_bg.jpg');
+	background-image: url('/assets/img/hero-desk.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -224,8 +224,10 @@ footer{
 .container_contact {
 	width: 950px;
 	margin: 80px auto;
-	
+	background-color: rgba(0, 0, 0, 0.616);
 	line-height: 1.5;
+    padding: 35px;
+    border-radius: 10px;
 }
 
 .text-center {
