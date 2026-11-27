@@ -234,6 +234,7 @@ const server = http.createServer((request, response) => {
         "/script.js": { file: "js/script.js", contentType: "text/javascript; charset=utf-8" },
         "/assets/img/logo_withoutbg_blacktext.png": { file: "assets/img/logo_withoutbg_blacktext.png", contentType: "image/png" },
         "/assets/img/hero-desk.jpg": { file: "/assets/img/hero-desk.jpg", contentType: "image/png" },
+        "/assets/img/logo_withoutbg.png": { file: "/assets/img/logo_withoutbg.png", contentType: "image/png" },
     };
 
 
