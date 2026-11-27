@@ -216,6 +216,29 @@ const products = [
 ]
 
 
+function imageFor(product) {
+    const name = product.name.toLowerCase();
+
+    if (name.includes("macbook")) return "/assets/img/products/laptop-macbook.jpg";
+    if (name.includes("mac mini") || name.includes("mac studio")) return "/assets/img/products/desktop-mini-silver.jpg";
+
+    if (product.type === "PC") {
+        if (name.includes("micro") || name.includes("tiny") || name.includes("mini")) {
+            return "/assets/img/products/desktop-mini.jpg";
+        }
+
+        return "/assets/img/products/desktop-tower.jpg";
+    }
+
+    return "/assets/img/products/laptop-business.jpg";
+}
+
+function withImage(product) {
+    return { ...product, image: imageFor(product) };
+}
+
+const subscribers = [];
+
 const server = http.createServer((request, response) => {
     // Egyszerű CORS-beállítás: a böngésző engedélyezi a szerver válaszait.
     response.setHeader("Access-Control-Allow-Origin", "*");
@@ -237,6 +260,12 @@ const server = http.createServer((request, response) => {
         "/assets/img/hero-desk.jpg": { file: "/assets/img/hero-desk.jpg", contentType: "image/png" },
         "/assets/img/product1.png": { file: "assets/img/product1.png", contentType: "image/png" },
         "/assets/img/product2.png": { file: "assets/img/product2.png", contentType: "image/png" },
+        "/assets/img/products/laptop-business.jpg": { file: "assets/img/products/laptop-business.jpg", contentType: "image/jpeg" },
+        "/assets/img/products/laptop-macbook.jpg": { file: "assets/img/products/laptop-macbook.jpg", contentType: "image/jpeg" },
+        "/assets/img/products/desktop-tower.jpg": { file: "assets/img/products/desktop-tower.jpg", contentType: "image/jpeg" },
+        "/assets/img/products/desktop-mini.jpg": { file: "assets/img/products/desktop-mini.jpg", contentType: "image/jpeg" },
+        "/assets/img/products/desktop-mini-silver.jpg": { file: "assets/img/products/desktop-mini-silver.jpg", contentType: "image/jpeg" },
+        "/assets/img/newsletter.jpg": { file: "assets/img/newsletter.jpg", contentType: "image/jpeg" },
         "/assets/img/logo_withoutbg.png": { file: "/assets/img/logo_withoutbg.png", contentType: "image/png" },
         "/assets/img/contact_bg.jpg": { file: "/assets/img/contact_bg.jpg", contentType: "image/png" },
     };
@@ -264,6 +293,80 @@ const server = http.createServer((request, response) => {
 
 
     const url = new URL(request.url, "http://localhost:8080");
+
+    if (request.method === "POST" && url.pathname === "/api/newsletter") {
+        let body = "";
+
+        request.on("data", (chunk) => {
+            body += chunk;
+            if (body.length > 10000) request.destroy();
+        });
+
+        request.on("end", () => {
+            let email = "";
+
+            try {
+                email = String(JSON.parse(body).email || "").trim();
+            } catch (error) {
+                email = "";
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+                response.writeHead(400, { "Content-Type": "application/json; charset=utf-8" });
+                response.end(JSON.stringify({ ok: false, error: "invalid_email" }));
+                return;
+            }
+
+            if (!subscribers.includes(email.toLowerCase())) {
+                subscribers.push(email.toLowerCase());
+            }
+
+            console.log("Newsletter signups:", subscribers.length);
+
+            response.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
+            response.end(JSON.stringify({ ok: true }));
+        });
+
+        return;
+    }
+
+    if (request.method === "GET" && url.pathname === "/api/products") {
+        const type = (url.searchParams.get("type") || "").trim().toLowerCase();
+        const query = (url.searchParams.get("q") || "").trim().toLowerCase();
+        const sort = url.searchParams.get("sort") || "name";
+        const maxPrice = Number(url.searchParams.get("maxPrice"));
+        const priceLimit = Number.isFinite(maxPrice) && maxPrice > 0 ? maxPrice : null;
+
+        const list = products
+            .filter((product) => !type || product.type.toLowerCase() === type)
+            .filter((product) => priceLimit === null || product.price <= priceLimit)
+            .filter((product) => {
+                if (!query) return true;
+
+                return [
+                    product.name,
+                    product.type,
+                    product.processor,
+                    product.ram,
+                    product.storage,
+                    product.display,
+                    product.condition
+                ]
+                    .filter(Boolean)
+                    .join(" ")
+                    .toLowerCase()
+                    .includes(query);
+            })
+            .sort((a, b) => {
+                if (sort === "price-asc") return a.price - b.price;
+                if (sort === "price-desc") return b.price - a.price;
+                return a.name.localeCompare(b.name);
+            });
+
+        response.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
+        response.end(JSON.stringify(list.map(withImage)));
+        return;
+    }
 
 
 
