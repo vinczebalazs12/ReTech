@@ -58,52 +58,152 @@
         </button>
     </nav>
 
-    <section class="hero" lang="en" aria-labelledby="hero-title">
+        <section class="hero-slider" data-hero-slider aria-roledescription="carousel" aria-label="ReTech highlights">
         <div class="container">
-            <div class="row align-items-center gy-6 py-6 lg:py-10">
+            <div class="hero-slider__track" data-track>
 
-                <div class="col-12 lg:col-6">
+                <article class="hero-slide is-active" data-slide aria-roledescription="slide" aria-label="1 / 3">
+                    <div class="row align-items-center gy-6">
+                        <div class="col-12 lg:col-6">
+                            <div class="hero-copy">
 
+                                <h1 class="hero-title" id="hero-title">
+                                    Laptops and PCs,<br>
+                                    <span class="hero-mark">ready for work</span>.
+                                </h1>
 
-                    <h1 class="hero-title" id="hero-title">
-                        Laptops and PCs,<br>
-                        <span class="hero-mark">ready for work</span>.
-                    </h1>
+                                <p class="hero-lead">
+                                    We buy used business laptops and PCs, then check every part, clean the
+                                    machine and upgrade it before we sell it. Prices start at €179, and every
+                                    device comes with a 12-month warranty.
+                                </p>
 
-                    <p class="hero-lead">
-                        We buy used business laptops and PCs, then check every part, clean the machine and
-                        upgrade it before we sell it. Prices start at €179, and every device comes with
-                        a 12-month warranty.
-                    </p>
+                                <div class="hero-actions">
+                                    <a class="hero-btn" href="/products.html">Browse products</a>
+                                    <a class="hero-link" href="/trade-in.html">Trade in your old device <span aria-hidden="true">→</span></a>
+                                </div>
 
-                    <div class="hero-actions">
-                        <a class="hero-btn" href="/products.html">Browse products</a>
-                        <a class="hero-link" href="/trade-in.html">Trade in your old device <span
-                                aria-hidden="true">→</span></a>
+                                <p class="hero-meta">12-month warranty · Checked by technicians</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 lg:col-6">
+                            <figure class="hero-figure">
+                                <img class="hero-photo" src="/assets/img/hero-desk.jpg" width="816" height="568"
+                                    alt="Refurbished laptop, monitor and desktop PC on a bright desk" draggable="false">
+                                <figcaption class="hero-flag">From €179</figcaption>
+                            </figure>
+                        </div>
                     </div>
+                </article>
 
-                    <p class="hero-meta">12-month warranty · Checked by technicians</p>
-                </div>
+                <article class="hero-slide" data-slide aria-roledescription="slide" aria-label="2 / 3" aria-hidden="true" inert>
+                    <div class="row align-items-center gy-6">
+                        <div class="col-12 lg:col-6">
+                            <div class="hero-copy">
+                                
 
-                <div class="col-12 lg:col-6">
-                    <figure class="hero-figure">
-                        <img class="hero-photo" src="/assets/img/hero-desk.jpg" width="816" height="568" alt="">
-                    </figure>
-                </div>
+                                <h2 class="hero-title">
+                                    Big-brand machines,<br>
+                                    <span class="hero-mark">small-budget prices</span>.
+                                </h2>
+
+                                <p class="hero-lead">
+                                    Ex-enterprise ThinkPads, Latitudes and EliteBooks with fresh SSD storage,
+                                    upgraded memory and a clean Windows install — for a fraction of what they
+                                    cost new.
+                                </p>
+
+                                <div class="hero-actions">
+                                    <a class="hero-btn" href="/products.html">Shop laptops</a>
+                                    <a class="hero-link" href="/products.html">See every PC <span aria-hidden="true">→</span></a>
+                                </div>
+
+                                <p class="hero-meta">Grade A condition · Battery tested</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 lg:col-6">
+                            <figure class="hero-figure">
+                                <img class="hero-photo" src="/assets/img/product1.png"
+                                    alt="Two refurbished business laptops on a bright desk" draggable="false">
+                                <figcaption class="hero-flag">Grade A stock</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-slide aria-roledescription="slide" aria-label="3 / 3" aria-hidden="true" inert>
+                    <div class="row align-items-center gy-6">
+                        <div class="col-12 lg:col-6">
+                            <div class="hero-copy">
+
+                                <h2 class="hero-title">
+                                    Your old device<br>
+                                    <span class="hero-mark">still has value</span>.
+                                </h2>
+
+                                <p class="hero-lead">
+                                    Send us your retired laptop or desktop. We assess it within 24 hours and
+                                    either buy it outright or put its value straight towards your next machine.
+                                </p>
+
+                                <div class="hero-actions">
+                                    <a class="hero-btn" href="/trade-in.html">Trade in your device</a>
+                                    <a class="hero-link" href="/trade-in.html">How it works <span aria-hidden="true">→</span></a>
+                                </div>
+
+                                <p class="hero-meta">Instant valuation · No obligation</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 lg:col-6">
+                            <figure class="hero-figure">
+                                <img class="hero-photo" src="/assets/img/product2.png"
+                                    alt="Refurbished desktop PCs and a monitor on a bright desk" draggable="false">
+                                <figcaption class="hero-flag">Instant quote</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
 
             </div>
+
+            <div class="hero-slider__ui">
+                <div class="hero-dots" data-dots role="group" aria-label="Slide navigation"></div>
+
+                <div class="hero-controls">
+                    <p class="hero-counter">
+                        <span data-current>01</span>
+                        <span class="hero-counter__sep" aria-hidden="true">/</span>
+                        <span data-total>03</span>
+                    </p>
+
+                    <div class="hero-nav">
+                        <button class="hero-nav-btn" type="button" data-prev aria-label="Previous slide">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M15 5l-7 7 7 7" />
+                            </svg>
+                        </button>
+                        <button class="hero-nav-btn" type="button" data-next aria-label="Next slide">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="hero-progress" aria-hidden="true"><span class="hero-progress__bar" data-progress></span></div>
+    </section>
+
+    <section class="hero">
         <div class="container p-5">
-
-             <h1 class="hero-title" id="hero-title">
-                        Our Products<br>
-                    </h1>
+            <h2 class="hero-title" id="products-title">Our Products</h2>
         </div>
-
-       
-
-
-
     </section>
 
 
