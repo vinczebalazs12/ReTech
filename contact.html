@@ -13,49 +13,119 @@
 </head>
 
 <body>
-<nav class="navbar d-flex align-items-center gap-3 bg-white border-bottom sticky-top px-3 py-2" data-bs-theme="light" aria-label="Fő navigáció">
-    <a class="navbar-brand p-0 m-0" href="/index.html">
-        <img class="nav-logo" src="/assets/img/logo_withoutbg_blacktext.png" alt="ReTech – felújított gépek és PC technológia">
-    </a>
+<div class="aura">
+    <nav class="navbar d-flex align-items-center gap-3 bg-white border-bottom sticky-top px-3 py-2"
+        data-bs-theme="light" aria-label="Fő navigáció">
+        <a class="navbar-brand p-0 m-0" href="/index.html">
+            <img class="nav-logo" src="/assets/img/logo_withoutbg_blacktext.png"
+                alt="ReTech – felújított gépek és PC technológia">
+        </a>
 
-    <dialog class="md:drawer drawer-end ms-auto" id="navbarNav" aria-labelledby="navbarNavLabel">
-        <div class="drawer-header">
-            <h5 class="drawer-title fs-sm text-uppercase fw-semibold" id="navbarNavLabel">Menü</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Bezárás"></button>
+        <dialog class="md:drawer drawer-end ms-auto" id="navbarNav" aria-labelledby="navbarNavLabel">
+            <div class="drawer-header">
+                <h5 class="drawer-title fs-sm text-uppercase fw-semibold" id="navbarNavLabel">Menü</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Bezárás"></button>
+            </div>
+            <div class="drawer-body p-4">
+                <ul class="navbar-nav nav-underline gap-4 fs-xs fw-semibold text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/trade-in.html">Trade in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </dialog>
+
+        <button class="btn btn-icon ms-2" type="button" aria-label="Kosár">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2.75 3.75h2.1l2.2 10.9a1.7 1.7 0 0 0 1.66 1.35h8.2a1.7 1.7 0 0 0 1.66-1.32l1.4-6.08H5.6" />
+                <circle cx="9.6" cy="19.6" r="1.15" />
+                <circle cx="17.4" cy="19.6" r="1.15" />
+            </svg>
+        </button>
+
+        <button class="btn btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-label="Menü megnyitása">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+    </nav>
+
+
+    <div class="container_contact">
+        <div class="text-center">
+            <h1>Contact Us</h1>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore <div>et dolore magra aliqua.
+                    Ut enim ad minim veniam.</div>
+            </div>
         </div>
-        <div class="drawer-body p-4">
-            <ul class="navbar-nav nav-underline gap-4 fs-xs fw-semibold text-uppercase">
-                <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/products.html">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/trade-in.html">Trade in</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/contact.html">Contact</a>
-                </li>
-            </ul>
+        <div class="content">
+            <div class="col-1">
+                <div class="address-line">
+                    <img alt="location" src="/assets/img/geo-alt-fill.svg" class="icon">
+                    <div class="contact-info">
+                        <div class="contact-info-title">Address</div>
+                        <div>1002 West 5th Ave,</div>
+                        <div>Alaska, New York,</div>
+                        <div>55060.</div>
+                    </div>
+                </div>
+                <div class="address-line">
+                    <img alt="location" src="/assets/img/telephone-fill.svg" class="icon">
+                    <div class="contact-info">
+                        <div class="contact-info-title">Phone</div>
+                        <div>12523-4566-8954-8956.</div>
+                    </div>
+                </div>
+                <div class="address-line">
+                    <img alt="location" src="/assets/img/info-circle-fill.svg" class="icon">
+                    <div class="contact-info">
+                        <div class="contact-info-title">Email</div>
+                        <div>contactemail@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <form>
+                    <div class="form-container">
+                        <h2>Send Message</h2>
+                        <div class="form-row">
+                            <label>Full Name</label>
+                            <div>
+                                <input type="text" class="form-field">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label>Email</label>
+                            <div>
+                                <input type="text" class="form-field">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label>Type your message...</label>
+                            <div>
+                                <input type="text" class="form-field">
+                            </div>
+                        </div>
+                        <input type="button" class="send-btn" value="Send">
+                    </div>
+                </form>
+            </div>
         </div>
-    </dialog>
-
-    <button class="btn btn-icon ms-2" type="button" aria-label="Kosár">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M2.75 3.75h2.1l2.2 10.9a1.7 1.7 0 0 0 1.66 1.35h8.2a1.7 1.7 0 0 0 1.66-1.32l1.4-6.08H5.6"/>
-            <circle cx="9.6" cy="19.6" r="1.15"/>
-            <circle cx="17.4" cy="19.6" r="1.15"/>
-        </svg>
-    </button>
-
-    <button class="btn btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Menü megnyitása">
-        <span class="navbar-toggler-icon" aria-hidden="true"></span>
-    </button>
-</nav>
+    </div>
 
 
-
+</div>
     <script src="js/script.js"></script>
     <script type="module"
         src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/js/bootstrap.bundle.min.js"></script>
