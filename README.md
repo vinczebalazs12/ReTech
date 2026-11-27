@@ -20,6 +20,7 @@
  - Products
  - Trade in
  - Contact
+ - Cart (or popup???)
 
 ---
 ### Links
